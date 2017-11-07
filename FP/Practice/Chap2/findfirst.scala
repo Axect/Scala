@@ -1,6 +1,6 @@
 object FindModule {
   def main(args: Array[String]): Unit = {
-    val result = findFirst(Array(7, 9, 13), (x: Int) => x == 9)
+    val result = findFirst(Array(7, 9, 13), (x: Int) => x == 9) // array literal + Function literal
     println(result)
   }
 
