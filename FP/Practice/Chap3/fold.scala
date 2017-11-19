@@ -14,10 +14,10 @@ object Fold {
   }
 
   def createList(tl: List[Int], n: Int): List[Int] = (tl, n) match {
-    case (Cons(x, xs), k) if k != 0 => createList(Cons(n-k+1, Cons(x, xs)), k-1)
-    case (Nil, k) => createList(Cons(n-k+1, Nil), k-1)
+    case (Cons(x, xs), k) if k != 0 => createList(Cons(x+1, Cons(x, xs)), k-1)
+    case (Nil, k) => createList(Cons(1, Nil), k-1)
     case (_, 0) => tl
   }
 
-  val temp = createList(Nil, 1000000)
+  val temp = createList(Nil, 10000)
 }
