@@ -19,7 +19,7 @@ object Drop {
     case Cons(x, xs) if !(f(x)) => dropWhile(xs, f)
   }
 
-  def dropWhile2[A](tl: List[A])(f: A => Boolean): List[A] = tl match {
+  def dropWhile2[A](tl: List[A])(f: A => Boolean): List[A] = tl match { // 스칼라의 형식 추론 돕기!
     case Cons(x, xs) if !f(x) => dropWhile2(xs)(f)
     case _ => tl
   }
