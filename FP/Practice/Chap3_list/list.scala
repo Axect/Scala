@@ -1,4 +1,4 @@
-package fpinscala.datastructures
+package ADT
 
 
 sealed trait List[+A] // + means Covariant
@@ -22,7 +22,7 @@ object List {
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
   }
-  
+
   val x = List(1,2,3,4,5) match {
     case Cons(x, Cons(2, Cons(4,_))) => x
     case Nil => 42

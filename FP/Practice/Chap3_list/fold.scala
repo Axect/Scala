@@ -1,9 +1,9 @@
-import fpinscala.datastructures._
+import ADT._
 
 object Fold {
   def main(args: Array[String]): Unit = {
     val t = System.nanoTime
-    val result = foldLeft(temp, 0)(_ + _)
+    val result = foldLeft(temp, 0.asInstanceOf[Number].longValue)((x: Long, y: Long) => (x + y))
     val elapsed = (System.nanoTime - t)/1e9d
     println(result, elapsed)
   }
@@ -13,9 +13,9 @@ object Fold {
     case Cons(x, xs) => foldLeft(xs, f(z, x))(f)
   }
 
-  def createList(tl: List[Long], n: Long): List[Long] = (tl, n) match {
-    case (Cons(x, xs), k) if k != 0 => createList(Cons(x+1, Cons(x, xs)), k-1)
-    case (Nil, k) => createList(Cons(1, Nil), k-1)
+  def createList(tl: List[Long], n: Int): List[Long] = (tl, n) match {
+    case (Cons(x, xs), k) if k != 0 => createList(Cons(x+1, tl), k-1)
+    case (Nil, k) => createList(Cons(1.asInstanceOf[Number].longValue, Nil), k-1)
     case (_, 0) => tl
   }
 
