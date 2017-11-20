@@ -13,7 +13,7 @@ object Fold {
     case Cons(x, xs) => foldLeft(xs, f(z, x))(f)
   }
 
-  def createList(tl: List[Int], n: Int): List[Int] = (tl, n) match {
+  def createList(tl: List[Long], n: Long): List[Long] = (tl, n) match {
     case (Cons(x, xs), k) if k != 0 => createList(Cons(x+1, Cons(x, xs)), k-1)
     case (Nil, k) => createList(Cons(1, Nil), k-1)
     case (_, 0) => tl
