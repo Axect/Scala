@@ -1,8 +1,8 @@
-import fpinscala.datastructures._
+import ADT._
 
 object Map {
   def main(args: Array[String]): Unit = {
-    println(map(temp)(x => (x.toFloat / 2)))
+    println(map(temp)(x => x + 1))
   }
 
   def map[A, B](l: List[A])(f: A => B): List[B] = l match {
@@ -12,3 +12,5 @@ object Map {
 
   val temp = List(1,2,3,4,5)
 }
+
+
