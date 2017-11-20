@@ -1,4 +1,4 @@
-import ADT._
+import fpinscala.datastructures._
 
 object Filter {
   def main(args: Array[String]): Unit = {

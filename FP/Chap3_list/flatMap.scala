@@ -1,4 +1,4 @@
-import ADT._
+import fpinscala.datastructures._
 
 object FlatMap {
   def main(args: Array[String]): Unit = {
