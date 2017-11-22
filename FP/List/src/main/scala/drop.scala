@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Drop {
+object drop {
   def main(args: Array[String]): Unit = {
     println(drop(temp, 3))
     println(dropWhile(temp, (x: Int) => x == 3))

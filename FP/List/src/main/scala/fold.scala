@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Fold {
+object fold {
   def main(args: Array[String]): Unit = {
     val t = System.nanoTime
     val result = foldLeft(temp, 0.asInstanceOf[Number].longValue)((x: Long, y: Long) => (x + y))

@@ -1,6 +1,6 @@
 import ADT.List._
 
-object FlatMap {
+object flatMap {
   def main(args: Array[String]): Unit = {
     println(flatMap(temp)(x => List(x, x)))
   }

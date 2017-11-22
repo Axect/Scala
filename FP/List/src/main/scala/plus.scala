@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Operation {
+object plus {
   def main(args: Array[String]): Unit = {
     println(plus(temp))
   }

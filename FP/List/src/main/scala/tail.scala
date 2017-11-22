@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Tail {
+object tail {
   def main(args: Array[String]): Unit = {
     println(tail(temp))
     println(setHead(temp, 10))

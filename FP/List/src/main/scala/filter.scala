@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Filter {
+object filter {
   def main(args: Array[String]): Unit = {
     println(filter(temp)(x => x%2 == 0))
   }

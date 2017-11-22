@@ -1,6 +1,6 @@
 import ADT.List._
 
-object Exam {
+object exam {
   def main(args: Array[String]): Unit = {
     val ans = sum(x)
     println(s"The result of sum is ${ans}")
