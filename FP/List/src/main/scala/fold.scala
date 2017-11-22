@@ -19,5 +19,5 @@ object Fold {
     case (_, 0) => tl
   }
 
-  val temp = createList(Nil, 10000000)
+  val temp = createList(Nil, 1000000)
 }
