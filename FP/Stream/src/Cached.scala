@@ -1,11 +1,12 @@
-import fpinscala.Stream._
+import fpinscala.Stream.Stream._
 
 object Cached {
   def main(args: Array[String]): Unit = {
-    val x = cons(expensive(1), empty)
-    val h1 = x.headOption // Just one caching!
-    val h2 = x.headOption // So it doesn't print!
-    println()
+    var t = 1
+    val x = cons(expensive(s"Call $t!"), empty)
+    val h1 = x.headOption // print!
+    t += 1 // SideEffect!
+    val h2 = x.headOption // not print!
   }
 
   def expensive(x: Any):Unit = println(x)
