@@ -5,4 +5,4 @@ function main()::Int64
     return s
 end
 
-@time main()
+main()
